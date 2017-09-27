@@ -1,0 +1,46 @@
+﻿@model Lottery.Models.LotteryModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Lottery Ticket Generation</h2>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/LotteryLogic.js"></script>
+<link href="~/Style/Common.css" rel="stylesheet" />
+
+@using (Html.BeginForm("Submit", "ListBox", FormMethod.Post))
+{
+    <div class="container">
+        <table id="maintbl">
+            <tr>
+                <td>
+                    <input type="button" value="Generate Random Number" id="generate" />
+                </td>
+                <td>
+                    <input type="text" id="Randomnumber" />
+                </td>
+                <td>
+                    <input type="button" value="Add" id="Add" />
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    @Html.ListBoxFor(m => m.SelectedTicket, new MultiSelectList((List<SelectListItem>)ViewData["random"], "Value", "Text"), new { style = "width: 200px", Multiple = "multiple" })
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="button" value="Remove" id="removeticket" />
+                 
+                </td>
+                <td></td>
+            </tr>
+        </table>
+
+    </div>
+
+}

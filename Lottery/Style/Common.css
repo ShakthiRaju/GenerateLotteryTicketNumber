@@ -1,0 +1,27 @@
+﻿body {
+    background-color: #D8D8D8;
+}
+.container
+{
+border-style: solid;
+  position : absolute;    
+   
+    height   : 200px;
+    left     : 43%;
+    top      : 45%;
+    margin-left : -100px; 
+    margin-top  : -100px;
+}
+       
+#Maintbl
+{
+width:400px;
+}
+
+#Randomnumber
+{
+     width: 200px;
+}
+h2{
+    text-align: center;
+}
